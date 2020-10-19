@@ -11,10 +11,10 @@ router = fastapi.APIRouter()
 # ===============================================
 @router.get("/hello")
 def hello_world():
-    return greetings.hello_world()
+    return {"message": "Hello World"}
 
 
 @router.get("/hello/me")
 def hello_me(username: str = fastapi.Security(authenticate, scopes=["user_role"])):
-    return greetings.hello_me(username)
+    return {"message": "Hello " + username}
 

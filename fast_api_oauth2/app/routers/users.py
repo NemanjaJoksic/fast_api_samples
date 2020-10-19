@@ -10,7 +10,7 @@ router = fastapi.APIRouter()
 # ===============================================
 @router.get("/users")
 def read_current_user(username: str = fastapi.Security(authenticate, scopes=["user_role"])):
-    return users.read_current_user(username)
+    return {"username": username, "age": 26}
 
 
 @router.post("/users")
