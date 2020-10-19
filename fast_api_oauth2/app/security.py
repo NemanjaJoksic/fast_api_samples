@@ -3,7 +3,7 @@ import typing
 import fastapi
 import jwt
 
-from src import exceptions, models
+from app import exceptions, models
 
 TOKEN_VALUE = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ik5lbWFuamEgSm9rc2ljIiwidXNlcm5hbWUiOiJOZW1hbmphIiwicm9sZXMiOlsidXNlcl9yb2xlIiwiYWRtaXJfcm9sZSJdLCJzY29wZXMiOlsiZW1haWwiXSwianRpIjoiZWZlODNjMjUtMzNmZC00NDc3LTliZDUtNDM3NWE2MzJkZThmIiwiaWF0IjoxNjAzMTQxMTI2LCJleHAiOjE2MDMxNDQ4MDB9.KTbiN85WN9YBZ7FLi1_-4F1Hob5sVI4hlgWGnRJPUHc "
 

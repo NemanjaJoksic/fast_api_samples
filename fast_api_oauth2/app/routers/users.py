@@ -1,5 +1,5 @@
 import fastapi
-from src import models, authenticate, exceptions
+from app import models, authenticate, exceptions
 
 router = fastapi.APIRouter()
 
