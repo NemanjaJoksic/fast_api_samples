@@ -39,8 +39,7 @@ def create_authenticate_oauth2() -> typing.Callable:
     # list of validators
     token_validators = [SimpleTokenValidator()]
 
-    def authenticate_oauth2(security_scopes: fastapi.security.SecurityScopes,
-                            token: str = fastapi.Depends(oauth2_scheme)):
+    def authenticate_oauth2(security_scopes: fastapi.security.SecurityScopes, token: str = fastapi.Depends(oauth2_scheme)):
         token_details = None
         for token_validator in token_validators:
             token_details = token_validator.validate(token)
