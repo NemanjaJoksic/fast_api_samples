@@ -1,5 +1,6 @@
 import fastapi
 from app import models, authenticate, exceptions
+from app.services import users
 
 router = fastapi.APIRouter()
 
@@ -9,8 +10,7 @@ router = fastapi.APIRouter()
 # ===============================================
 @router.get("/users")
 def read_current_user(username: str = fastapi.Security(authenticate, scopes=["user_role"])):
-    user_return = {"username": username, "age": 26}
-    return user_return
+    return users.read_current_user(username)
 
 
 @router.post("/users")

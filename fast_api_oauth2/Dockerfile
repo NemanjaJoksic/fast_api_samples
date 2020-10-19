@@ -17,4 +17,4 @@ EXPOSE 80
 COPY ./src ./src
 
 # startup command
-ENTRYPOINT ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "80"]
+ENTRYPOINT ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
