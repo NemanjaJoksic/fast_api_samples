@@ -25,8 +25,7 @@ class SimpleTokenValidator(TokenValidator):
         try:
             decoded_token = jwt.decode(token, self.__secret, algorithms=self.__algorithm)
             token_details = models.TokenDetails(token=token, username=decoded_token["username"],
-                                                roles=decoded_token["roles"],
-                                                scopes=decoded_token["scopes"])
+                                                roles=decoded_token["roles"], scopes=decoded_token["scopes"])
             return token_details
         except:
             print("Can't decode token")
